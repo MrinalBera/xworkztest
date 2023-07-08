@@ -1,0 +1,135 @@
+brother
+grand father
+cousin 
+maternal Uncle
+nephew
+X/a*y
+R
+Brother
+Father
+T
+10kms
+south
+South
+west
+
+JAVA:
+1.It will show an error because int cannot be converted to boolean.
+2.10,110
+3.It will show an error because int cannot be converted to boolean.
+4.The main method in Java is declared as static because it needs to be accessible 
+and executable without creating an instance of the class.
+5.import java.util.Arrays;
+
+public class Reverse {
+    public static void main(String[] args) {
+        int[] numbers = {10, 45, 30, 2, 1};
+        
+        System.out.println("Original array: " + Arrays.toString(numbers));
+        
+        reverseArray(numbers);
+        
+        System.out.println("Reversed array: " + Arrays.toString(numbers));
+    }
+    
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
+6.import java.util.Arrays;
+
+public class DescendingOrder {
+    public static void main(String[] args) {
+        int[] arr = { 5, 2,10,2,3,5,6,5,2 };
+
+        
+        Arrays.sort(arr);
+        reverseArray(arr);
+
+    
+        int[] distinctArray = removeDuplicates(arr);
+
+       
+        System.out.println("Array in descending order without duplicates:");
+        for (int num : distinctArray) {
+            System.out.print(num + " ");
+        }
+    }
+
+    
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    public static int[] removeDuplicates(int[] arr) {
+        int n = arr.length;
+        int[] temp = new int[n];
+        int j = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] != arr[i + 1]) {
+                temp[j++] = arr[i];
+            }
+        }
+        temp[j++] = arr[n - 1];
+
+        int[] distinctArray = new int[j];
+        System.arraycopy(temp, 0, distinctArray, 0, j);
+
+        return distinctArray;
+    }
+}
+7.It will print "Done"
+8.Difference between this and this()
+"this" is a keyword and "this()" is a constructor.
+9.public class Swap {
+    public static void main(String[] args) {
+        int a = 4;
+        int b = 100;
+
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+10.class Pattern{
+	public static void main(String[] args){
+		System.out.println("&    &");
+		System.out.println("   &  ");
+		System.out.print("&    &");
+	}
+}
+11.class Pattern{
+	public static void main(String[] args){
+		System.out.println("% % %");
+		System.out.println("% & % ");
+		System.out.print("% % %");
+	}
+}
+12.class Pattern{
+	public static void main(String[] args){
+		System.out.println("% % %");
+		System.out.println("%  % ");
+		System.out.print("% % %");
+	}
+}
